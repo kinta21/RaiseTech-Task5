@@ -16,13 +16,14 @@ public class Main {
             System.out.println(shop.getFounding() + "年創業");
         }
 
-        System.out.println("<創業100年以上でzのつく自動車メーカー>");
+        System.out.println("<創業100年以上でaのつく自動車メーカー>");
 
         carShops.stream()
                 .filter(carShop -> carShop.getFounding() <= 1923)
-                .filter(carShop -> carShop.getName().contains("z"))
+                .filter(carShop -> carShop.getName().contains("a"))
                 .map(carShop -> carShop.getName().toUpperCase())
                 .forEach(System.out::println);
 
     }
 }
+
